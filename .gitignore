@@ -1,0 +1,28 @@
+# ---- PhysioNet MIMIC-III data use agreement: NEVER commit patient-level data
+NRDSNOMICE.csv
+NARDSImputed_data.*
+NRDSMICE.sav
+*.RData
+.RData
+NestedCV_All_Predictions.csv
+*per_patient*predictions*.csv
+model_transparency/NARDS_AKI_trained_model.rda
+NARDS_AKI_trained_model.rda
+
+# ---- shinyapps.io credentials and local deployment records
+deploy.R
+rsconnect/
+app/rsconnect/
+*.dcf
+*shinyapps*secret*
+*shinyapps*token*
+
+# ---- local editor / OS artefacts
+.Rproj.user/
+.Rhistory
+~$*
+Thumbs.db
+.DS_Store
+
+# NOTE (intentional exceptions): risk_thresholds.csv and results/*.csv are
+# aggregate, DUA-safe summary tables and MUST be committed.

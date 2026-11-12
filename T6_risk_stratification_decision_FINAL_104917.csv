@@ -1,0 +1,4 @@
+"Risk_Level","Threshold_Range","Sample_Number","Sample_Percent","Clinical_Intervention","Sensitivity","Specificity","PPV","NPV","F1_Score","AKI_rate_observed"
+"Low Risk","<0.065",221,"66%","Low Risk: Standard NSAID therapy and routine renal function monitoring.",0.848,0.715,0.246,0.977,0.381,"5/221 = 2.3% (0.7-5.2%)"
+"Moderate Risk","0.065-0.301",82,"24.5%","Moderate Risk: Optimize NSAID treatment duration, strengthen fluid management, and closely monitor serum creatinine and urine output.",NA,NA,NA,NA,NA,"9/82 = 11.0% (5.1-19.8%)"
+"High Risk",">=0.301",32,"9.6%","High Risk: Initiate multidisciplinary consultation (neonatology/nephrology/cardiology), reduce or avoid high-dose NSAID exposure, and prioritize evaluation for PDA ligation or alternative therapeutic strategies.",0.576,0.957,0.594,0.954,0.585,"19/32 = 59.4% (40.6-76.3%)"

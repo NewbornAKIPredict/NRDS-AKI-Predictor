@@ -1,0 +1,3 @@
+"Model","AUC","AUC_95CI","AUC_PR","Brier"
+"XGBoost (full model)",0.8572,"0.8154-0.8925",0.5731,0.0652
+"SNAP-II alone (single-predictor logistic)",0.721,"0.6798-0.7625",0.2068,0.0916

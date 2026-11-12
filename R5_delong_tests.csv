@@ -1,0 +1,8 @@
+"Comparison","p_value"
+"XGB vs LR",2.13e-06
+"XGB vs RF",0.716
+"XGB vs SVM",2.97e-14
+"XGB vs DT",0.0022
+"XGB vs NNET",1.4e-17
+"XGB vs KNN",3.06e-20
+"XGB vs SNAP_II",8.13e-11

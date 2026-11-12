@@ -1,0 +1,8 @@
+[R12] METHODS REPORTING (for manuscript / response letter)
+MICE: m=5, maxit=10, applied to the training fold only; test fold imputed separately (m=1, maxit=1).
+Boruta: applied within each training fold; maxRuns=20, TentativeRoughFix applied, shadow-feature inference with default ntree=500; candidate pool per fold = 48 variables (full pool = 48).
+XGBoost: hyperparameters (nrounds, max_depth, eta) tuned inside each training fold via inner 5-fold CV over an 8-point grid; no tuning used held-out data.
+Tuned parameters per fold: nrounds median=100, max_depth median=3, eta median=0.05.
+Final XGBoost hyperparameters to report: nrounds=100, max_depth=3, eta=0.05, seed=1234.
+Sample size justification and EPV: see R11_sample_size.txt.
+Risk stratification thresholds derived from training-set OOF predictions: Youden=0.051, high-risk=0.273; evaluated on the held-out test set.

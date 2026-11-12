@@ -1,0 +1,2 @@
+"youden_threshold","high_risk_threshold","youden_display","high_risk_display","derivation","source"
+0.0651,0.3008,0.065,0.301,"training-set out-of-fold predictions only; applied unchanged to the held-out test set","revision_tables_figures_v1.R (T6_footnote.txt / tables_figures_log.txt)"

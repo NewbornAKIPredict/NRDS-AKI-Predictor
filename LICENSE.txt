@@ -1,0 +1,42 @@
+LICENCE AND DATA-GOVERNANCE NOTICE
+TP-2026-0897-CL / NRDS-AKI XGBoost Predictor (FINAL v4, 2026-11-12)
+
+1. Code (all .R files) is released under the MIT License:
+
+   Copyright (c) 2026 The authors of TP-2026-0897-CL
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+2. RESEARCH USE ONLY. The model is a development-stage prediction model with
+   internal validation only. It is not a medical device, is not validated for
+   clinical use, and must not be used for diagnosis, triage, monitoring or
+   treatment decisions. See MODEL_CARD.md section 2.
+
+3. DATA RESTRICTION. This release contains NO patient-level data. MIMIC-III
+   v1.4 is governed by the PhysioNet data use agreement (Certification No.
+   55551396); the analytic cohort, per-patient records, per-patient prediction
+   files and the local artefact
+   model_transparency/NARDS_AKI_trained_model.rda (which embeds the 1,115 x 49
+   analytic data frame) must not be redistributed. The code reconstructs the
+   cohort from an authorised local copy of MIMIC-III. Deployment tokens and
+   rsconnect account secrets are likewise excluded from this release.
+
+4. Third-party material: MIMIC-III derived KDIGO staging concepts are from the
+   MIT-LCP mimic-code repository (https://github.com/MIT-LCP/mimic-code) and
+   remain subject to their own licence and to the PhysioNet DUA.

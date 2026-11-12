@@ -1,0 +1,11 @@
+[T2c] Benchmarking against SNAP-II as a SINGLE predictor (reviewer request)
+Both models evaluated on identical pooled out-of-fold predictions; SNAP-II
+benchmark is a logistic regression AKI ~ SNAP_II refitted in each training fold.
+                                      Model    AUC      AUC_95CI AUC_PR  Brier
+1                      XGBoost (full model) 0.8572 0.8154-0.8925 0.5731 0.0652
+2 SNAP-II alone (single-predictor logistic) 0.7210 0.6798-0.7625 0.2068 0.0916
+DeLong p (XGBoost vs SNAP-II alone) = 1.55e-10
+Category-free NRI: cases = 0.390, non-cases = 0.691
+Note: the min-max-normalised SNAP-II score shown in Table 2/2b is a monotone
+transform of the raw score and therefore yields the same ROC AUC; the logistic
+model additionally provides calibrated probabilities and a valid Brier score.

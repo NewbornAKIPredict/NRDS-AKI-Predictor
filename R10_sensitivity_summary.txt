@@ -1,0 +1,3 @@
+Sensitivity A (exclude FirstUrineOutput): OOF AUC = 0.8422
+Sensitivity B (min_weight -> birth weight): OOF AUC = 0.8498
+Main model OOF AUC (XGB) = 0.8572

@@ -1,0 +1,18 @@
+[R11] candidate pool size = 48 ; median confirmed features per fold = 20
+Events per candidate predictor (EPV) = 2.5 (events = 118)
+Events per confirmed feature (EPV, median fold) = 5.9
+Nagelkerke R2 of full logistic model = 0.159
+NB: Assuming 0.05 acceptable difference in apparent & adjusted R-squared 
+NB: Assuming 0.05 margin of error in estimation of intercept 
+NB: Events per Predictor Parameter (EPP) assumes prevalence = 0.1058296  
+ 
+           Samp_size Shrinkage Parameter CS_Rsq Max_Rsq Nag_Rsq   EPP
+Criteria 1      5295     0.900        48  0.078   0.491   0.159 11.67
+Criteria 2      1853     0.761        48  0.078   0.491   0.159  4.09
+Criteria 3       146     0.900        48  0.078   0.491   0.159  0.32
+Final           5295     0.900        48  0.078   0.491   0.159 11.67
+ 
+ Minimum sample size required for new model development based on user inputs = 5295, 
+ with 561 events (assuming an outcome prevalence = 0.1058296) and an EPP = 11.67 
+ 
+ 

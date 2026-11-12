@@ -1,0 +1,88 @@
+PUBLIC GITHUB DEPOSIT - TP-2026-0897-CL (release 2026-11-12)
+Reviewer requirement: "Transparent access to the code and the trained model"
+and the associated criticisms on full pipeline code, version parameters, fold
+splits and TRIPOD+AI items 15a-15b.
+
+This directory IS the repository root; there is no enclosing folder.
+
+== Reviewer-facing / manuscript-ready documentation ==
+TRANSPARENT_ACCESS.md          - THE reviewer-facing answer: comments verbatim,
+                                 reply text, full specification, artefacts,
+                                 verification record, author-only actions
+TRANSPARENCY_RESPONSE.md       - point-by-point response-letter text (plus the
+                                 explicit 100-vs-200 tree clarification)
+code_availability_statement.md - Footnote replacement text for manuscript5
+README.md                      - repository landing page and navigation
+MODEL_CARD.md                  - authoritative model card (supersedes all
+                                 earlier deposited model cards)
+README_reproducibility.md      - run order, seeds, fold splits, dictionaries,
+                                 units, DUA-safe artefacts
+DEPLOYMENT_NOTE.md             - how the public calculator was built from the
+                                 four released runtime files
+UPLOAD_GUIDE.md                - cleanup, upload, never-upload list, self-check
+MANIFEST.txt                   - this file
+LICENSE.txt                    - MIT / CC BY 4.0 / research-only / DUA notice
+.gitignore                     - blocks patient-level data and credentials
+SHA256SUMS.txt                 - SHA-256 for every released file
+
+== Trained model (required; NO patient-level data) ==
+model.json                     - portable JSON booster, 200 trees, 29 features
+model_meta.rds                 - X_template (29 columns), selected_feat (22),
+                                 feature_info, med; no patient rows
+xgboost_model.rda              - 48,472 bytes: original xgb.Booster + the same
+                                 dictionary; requires xgboost 1.7.7.1
+risk_thresholds.csv            - exact cut-points 0.0651 / 0.3008 plus the
+                                 rounded display labels 0.065 / 0.301
+
+== Executable code ==
+revision_main_v1.R             - nested 10-fold CV, train-fold-only MICE,
+                                 per-fold Boruta, inner-CV tuning, R1-R13
+revision_tables_figures_v1.R   - Tables 2-6, Figures 2-9, SNAP-II benchmark,
+                                 subgroups, model artefacts
+revision_legacy_bridge.R       - compatibility layer for the six originals
+revision_consolidate.R         - restores canonical CSVs after Excel/WPS
+legacy_wrappers/               - six original scripts as thin wrappers
+app.R                          - deployed Shiny calculator; pure-R scorer,
+                                 shiny + jsonlite only, NO xgboost
+predict_new_patient.R          - one-patient reproduction, no xgboost,
+                                 no MIMIC-III access needed
+prepare_deploy.R               - .rda -> model.json conversion and parity check
+verify_release.R               - structure, cut-points, checksums, DUA check
+
+== Environment ==
+sessionInfo.rds / sessionInfo.txt - exact R / package versions
+                                    (R 4.3.2, xgboost 1.7.7.1)
+
+== Curated aggregate results ==
+results/                       - FINAL aggregate tables ONLY, no per-patient
+                                 rows; results/README.md explains which
+                                 historical values are superseded
+
+== Explicitly EXCLUDED ==
+NARDS_AKI_trained_model.rda    - local artefact embedding the 1,115 x 49
+                                 patient-level analytic frame (DUA)
+NRDSNOMICE.csv / .RData /      - patient-level data and per-patient
+NestedCV_All_Predictions.csv     predictions; never redistribute
+deploy.R / rsconnect token     - live shinyapps.io credentials; never commit
+
+
+== Post-revision correction trail (added 2026-11-12) ==
+revision_patches/README.md  - status table (FINAL / SUPERSEDED), the nine
+                              synchronisation changes, and the list of
+                              development-only scripts deliberately excluded
+revision_patches/*.R        - 9 WorkBuddy correction / verification scripts
+                              from 05-11 Nov: GA coding, Wilson / exact CIs,
+                              Supplementary Figure S3, <32 vs >=32 DeLong,
+                              exact cut-points, worked-example column check
+
+== Synchronised analysis scripts (2026-11-12) ==
+revision_main_v1.R          - now uses Table 1 GA coding (0=Others, 1=<28,
+                              2=29-32, 3=33-34, 4=35-36), <32 = codes 1+2,
+                              >=32 = 3+4, kilogram weights, kdigo_stages_7day,
+                              NARDS_ROOT/pE(), and the authoritative
+                              cut-points in the generated Methods text
+revision_tables_figures_v1.R- same GA coding and dichotomy; report_med (100)
+                              separated from the FIXED 200-tree deployment
+                              refit; DUA warning on d_full; generated local
+                              files renamed so they cannot overwrite the
+                              released README / prediction example

@@ -1,0 +1,3 @@
+[R6] Calibration of the final XGBoost model (pooled OOF, n=1115)
+calibration_intercept     calibration_slope                     n  0.195                 1.088              1115.000  null device
+(values parsed from the successful 10-fold run log)
