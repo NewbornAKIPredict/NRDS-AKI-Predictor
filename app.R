@@ -259,9 +259,9 @@ message(sprintf(
 # ---------------------------------------------------------------------------
 # Table 1 wording, verbatim. Code 4 is the residual "Others" category, NOT an
 # ordinal rank; never reinterpret these codes as gestational-age ranks.
-GA_CHOICES <- c("< 28 weeks" = "0", "29-32 weeks" = "1",
-                "33-34 weeks" = "2", "35-36 weeks" = "3",
-                "Others (Table 1)" = "4")
+GA_CHOICES <- c("< 28 weeks" = "1", "29-32 weeks" = "2",
+                "33-34 weeks" = "3", "35-36 weeks" = "4",
+                "Others (Table 1)" = "0")
 BW_CHOICES <- c("Unknown" = "0", "ELBW <1000 g" = "1",
                 "VLBW 1000-1499 g" = "2", "1500-2499 g" = "3",
                 ">=2500 g" = "4")
